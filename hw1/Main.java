@@ -10,7 +10,6 @@
  */
 
 import javax.swing.JFrame;
-import javax.swing.JProgressBar;
 
 import java.awt.FlowLayout;
 import java.awt.EventQueue;

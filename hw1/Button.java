@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Color;
 
-
+@SuppressWarnings("deprecated")
 public class Button extends JButton implements ActionListener {
     private int id, counter;
     private String label, message;
