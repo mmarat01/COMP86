@@ -1,5 +1,5 @@
 /*
- * COMP 86 - Assignment 2
+ * COMP 86 - Assignment 3
  *
  * Specifications
  * Written by: Mijael Maratuech
@@ -17,6 +17,11 @@ Description of simulation:
     supposed to be more of a nice/cute and relaxing simulation than a game,
     the user will be able to modify the simulation in multiple aways (more on
     this below).
+  ----As of HW3, I've decided that the user will be able to control the ants
+      by clicking on each of them and moving them one by one to their preference.
+      They will be able to customize the ants colors, and perhaps the colony's
+      obstacles as well (TBD). The main rules are determined by the labels of
+      the buttons on the controls panel.
 
 Description of UI:
   - The main skeleton of the UI involves a BorderLayout with three main areas:
@@ -30,15 +35,19 @@ Description of UI:
     page, and a start/stop button. Some of this functionality might change in
     the future.
 
+    ----As of HW3, the dark mode / light mode button has been implemented. I
+        used this by references to the proper elements to change passed into
+        the MyButton class
+    ----As core of the canvas, the background (and potential main grid) of
+        AntWorld simulation has been implemented in such a way that it is
+        perfectly resizable/
+
 Notes:
-    The inheritance could definitely be improved between the classes I built
-    from scratch. Thinking about all the listeners I'll need and the
-    information I'll eventually obtain from the simulation when it's up and
-    running made the process difficult. As a final comment, the thing that
-    worries me the most is *exactly* how I'm supposed to simulate the
-    movement of the ants, as I've never done something like that. Is it
-    timed? Is everything hard-coded?. If I give the user more power over, the
-    ants, is it still a simulation? I look forward to clarifying these answers.
+    I struggled to find a proper way to generate the ants from an ImageIcon
+    (as png images). I also struggled with drawing obstacles in the canvas.
+    I tried making them responsive by positioning in terms of percentages
+    but this just gets messed up when resizing the window in any non-regular
+    way.
 
 Design documentation:
   - Inheritance:
@@ -52,6 +61,7 @@ Design documentation:
     NumAnts inherits from JSlider
 
   - Aggregation:
-    Controls contains [ControlsTitle, NumAnts, ColorAnts, MyButton]
-    Header contains HeaderTitle
+    Controls contains [SectionTitle, NumAnts, ColorAnts, MyButton]
+    Header contains SectionTitle
     Main contains [Canvas, Header, Controls]
+    MyButton contains [Main, Controls, Header, Canvas]

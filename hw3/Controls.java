@@ -7,13 +7,6 @@
  * October, 2020
  */
 
-/*****************************************************************************
-
-
-        TO DO: CHANGE LABELS SET UP SO I CAN CHANGE THEM W MYBUTTON LISTENER
-
-
-*****************************************************************************/
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.border.LineBorder;

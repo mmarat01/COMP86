@@ -15,7 +15,7 @@ import java.awt.event.ItemEvent;
 public class ColorAnts extends JComboBox<String> implements ItemListener{
     //private data
     private String[] colors = {"black", "brown", "gray", "red",
-                              "purple"};
+                              "purple", "pink"};
 
     //constructor
     public ColorAnts(){
